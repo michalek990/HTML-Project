@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 
+ <meta charset="UTF-8">
+ <meta name="vievport" content="width=device-width, initial-scale=1.0">
+ 
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+ <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+ <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+ <link rel="stylesheet" type="text/css" href="CSS/magazyn.css" />
+ <link rel="stylesheet" type="text/css" href="CSS/formularz.css" />
+ 
+ <script src="JS/function.js"></script>
+ <title>Witamy w kosmosie</title>
+ </head>
+ <body onload="dodajDate()">
+    <div id="wripper">
+        <header>
+            <img src="zdjecia/star.jpeg" alt="obrazek1 - header"  />
+        </header>
+        <nav>
+            <a class="menu" href="strona_głowna.html">Odleć z nami!</a> 
+            <a class="menu" href="strona_informacyjna.html">Historia firmy</a>     
+            <a class="menu" href="Formularz.html">Zapisz się!</a> 
+            <a class="menu" href="Magazyn.html">Sklep</a>    
+            <a class="menu" href="strona_infromacyjna2.html">O nas</a>       
+        </nav>
+        <h1><b>Lista pakietów</b></h1>
+        <div id="tresc">
+        
+            <div class="xiaomi">Pakiet 1<img src="zdjecia/phone-512.png " width="30px" height="30px"></div> <div class="as">Połaczenia w kraju(0,60zł/minuta)</div>  </br>
+            <div class="xiaomi">Pakiet 2<img src="zdjecia/phone-512.png " width="30px" height="30px"><img src="zdjecia/234859.png " width="30px" height="30px"></div>   <div class="as">Połaczenia w kraju(0,60zł/minuta)+sms</div>    </br>   
+            <div class="xiaomi">Pakiet 3<img src="zdjecia/phone-512.png " width="30px" height="30px"><img src="zdjecia/234859.png " width="30px" height="30px"><img src="zdjecia/fdb01354a7f787c8d3191c8759c7d428.png " width="30px" height="30px"></div>  <div class="as">Połaczenia w kraju(0,60zł/minuta)+sms+5GB Internetu </div> </br> 
+            <div class="xiaomi">Pakiet Rodzina<img src="zdjecia/family-icon-115499247590bm8ocmnlc.png" width="30px" height="30px"></div>  <div class="as">Połaczenia darmowe +sms darmowe+5GB Internetu(4 urządzenia)</div>  </br> 
+            <div class="xiaomi"> Pakiet Nielimitowany internet<img src="zdjecia/fdb01354a7f787c8d3191c8759c7d428.png" width="30px" height="30px"></div>  <div class="as">Połaczenia darmowe +sms darmowe+nielimitowany Internet</div>    </br> 
+                <div class="xiaomi"> Pakiet dla par<img src="zdjecia/4825529.png" width="30px" height="30px"></div>   <div class="as">Połaczenia darmowe +sms darmowe+darmowe rozmowy na messenegrze</div>  </br> 
+                    <div class="xiaomi">Pakiet 2+2</div>   <div class="as">2 miesiące płacisz dwa nie</div>   </br> 
+                        <div class="xiaomi">Pakiet 2+50</div>   <div class="as">Połaczenia darmowe +sms darmowe+50 GB InternetuPakiet unlimited</div>  </br> 
+                            <div class="xiaomi">Pakiet unlimited</div>  <div class="as">Wszytsko nielimitowane</div>   </br> 
+                                <div class="xiaomi">Pakiet StarFly®<img src="zdjecia/star-512.png" width="30px" height="30px"></div>  <div class="as">Wszytsko nielimitowane + co miesiąc niespodzianki!</div>   </br> 
+       
+        <h1><b>Zamów swój pakiet !</b></h1>
+            <table>
+                <td>
+                    <table >
+            
+                        <tr> <td>Pakiet(1,2...,10)</td></tr>
+                        <tr><td><input  id='pakiet'  /></td></tr>
+                        <tr> <td>Czas trwania pakietu:(w miesiącach) </td> </tr>
+                        <tr><td><input id='czas' /> </td> </tr>
+                        <tr> <td>Wkład początkowy: </td> </tr>
+                        <tr><td><input id='wklad'/> </td> </tr>
+                        <tr> <td>Liczba rat: </td>  </tr>
+                        <tr><td><input list="rat" id='raty'/> </td></tr>
+                        <tr> <td>Imie:</td></tr>
+                        <tr><td><input   pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+"  /></td></tr>
+                        <tr> <td>Nazwisko: </td> </tr>
+                        <tr><td><input   pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+"  /> </td> </tr>
+                        <tr> <td>Numer karty: </td> </tr>
+                        <tr><td><input pattern="[0-9]{26}+"  /> </td> </tr>
+                        <tr> <td>Miasto: </td>  </tr>
+                        <tr><td><input    pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+" /> </td></tr>
+                        <tr> <td>Ulica: </td>  </tr>
+                        <tr><td><input    pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+" /> </td></tr>
+                        <tr> <td>Numer domu/lokalu: </td>  </tr>
+                        <tr><td><input  pattern="[0-9]{3}+[0-9]{3}" /> </td></tr>
+                          <datalist id="rat">
+                            <option value="12">
+                            <option value="24">
+                            <option value="36">
+                            <option value="48">
+                          </datalist>
+                        <tr> <td colspan='2' class="button"><button onclick="dodajprodukt()">
+                        Dodaj zadanie do koszyka</button></td> </tr>
+                        <tr> <td class="button"><button onclick='pokazListe()'>Pokaż listę zadań</button></td></tr>
+                         <tr><td class="button"><button onclick='usunListe()'>Wyślij zamówienie</button></td> </tr>
+                        </table>
+        
+        
+        </table>
+                <div id="list"></div> 
+        
+        </div>
+        <footer>
+            StarFly® STARFLYS™: THE MGG SAGA. 
+            SOFTWARE © 2020 MG Mobile Sage. 
+        </footer>
+     </div>
+ </body>
+</html>
